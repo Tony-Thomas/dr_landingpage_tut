@@ -1,2 +1,80 @@
-@import url('https://fonts.googleapis.com/css?family=Railway')
-@import url('https://fonts.googleapis.com/css?family=Oswald')
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/*-Override any inherent default settings with the following..-*/
+html, body { 
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	
+}
+
+.intro {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url(https://static.pexels.com/photos/26206/pexels-photo.jpg) no-repeat 50% 50%; /*-what is the purpose of the no-repeat 50% 50%-*/
+	display: table; /*-use in combination with "top:0" to remove margin at top of page-*/
+	top: 0; 
+	background-size: cover; /*-uncrops the image-*/
+}
+
+.intro .inner {
+	display: table-cell; /*-let the element behave like a <td> element -|- <td> tag defines a standard cell in an HTML table.-*/
+	vertical-align: middle; /* vertically aligns middle */
+	width: 100%;
+	max-width: none; /*-This seems redundant to me.. why is this necessary?-*/
+}
+
+.content {
+	max-width: 500px; /*-not necessary, but can be used to size another image ontop of the background image, or some other content.-*/
+	margin: 0 auto;	
+	text-align: center; /*-content was offest to the left. this aligns in directly in the center-*/
+}
+
+.content h1 {
+	font-family: 'Raleway', sans-serif;
+	color: #f9f3f4;
+	text-shadow: 0px 0px 300px #000; /*-casts slight blurred shaddow behind text-*/
+	font-size: 500%; /*-percentage is based on inherent font size from the html/body default-*/
+}
+
+.btn {
+	border: solid #035A81 3px;
+	border-radius: 9px;
+	font-family: 'Oswald', sans-serif;
+	color: #035A81;
+	font-size: 135%;
+	padding: 10px 20px; /*-when only two are values are listed the first value is for top and bottom, and the second value is for left and right-*/
+	text-transform: uppercase;
+	text-decoration: none; /*removes underline-*/
+}
+
+.btn:hover {
+	color: #fff;
+	border: solid #fff 4px;
+}
+
+/*---- MEDIA QUERIES ----*/
+
+/*-768px is standard iPad size tablet-*/
+@media screen and (max-width: 768px) {
+	
+	.content h1 {
+		font-size: 250%; /*-lowered from 500%-*/
+	}
+	.btn {
+		font-size: 110%; /*-lowered from 135%-*/
+		padding: 7px 15px; /*-lowered from 10px 20px-*/
+	}
+
+
+}
+
+
+
+
+
+
+
